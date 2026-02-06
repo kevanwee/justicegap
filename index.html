@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JusticeGap — Legal Reality, But Mapped</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>JusticeGap</h1>
+        <p>“Legal reality, but mapped.” Find how far help really is.</p>
+      </div>
+      <div class="badge">GIS × Law</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Find legal help</h2>
+        <label class="field">
+          <span>Your location (lat, lng)</span>
+          <input id="locationInput" type="text" placeholder="1.2868, 103.8545" />
+        </label>
+
+        <button id="geoButton" class="button secondary">Use my location</button>
+
+        <label class="field">
+          <span>Legal problem</span>
+          <select id="issueSelect">
+            <option value="divorce">Divorce / family</option>
+            <option value="employment">Employment</option>
+            <option value="debt">Debt</option>
+            <option value="criminal">Criminal</option>
+            <option value="housing">Housing</option>
+            <option value="immigration">Immigration</option>
+          </select>
+        </label>
+
+        <div class="toggles">
+          <label>
+            <input type="checkbox" id="openNow" checked />
+            Open now
+          </label>
+          <label>
+            <input type="checkbox" id="weekdayOnly" checked />
+            Weekdays only
+          </label>
+        </div>
+
+        <div class="routes">
+          <h3>Routes</h3>
+          <p class="routes-sub">
+            Shows driving + walking alternatives (OSRM). Public transport uses
+            OneMap if you provide a token.
+          </p>
+
+          <label class="field">
+            <span>OneMap access token (optional, for public transport)</span>
+            <input id="oneMapToken" type="password" placeholder="Paste token here" />
+          </label>
+
+          <div id="routeSummary" class="route-summary"></div>
+          <div id="routeList" class="route-list"></div>
+        </div>
+
+        <button id="searchButton" class="button primary">Find nearest help</button>
+
+        <div class="result" id="result"></div>
+
+        <div class="legend">
+          <h3>Legend</h3>
+          <div><span class="dot court"></span> Court</div>
+          <div><span class="dot clinic"></span> Legal Aid Clinic</div>
+          <div><span class="dot cjc"></span> CJC</div>
+        </div>
+
+        <div class="note">
+          <p>
+            Demo data only. Route tracing uses a public routing service when
+            available; otherwise it falls back to a straight-line trace.
+          </p>
+        </div>
+      </section>
+
+      <section class="map-wrap">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

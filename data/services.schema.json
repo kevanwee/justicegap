@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "type", "lat", "lng", "issues", "hours"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "type": { "type": "string", "enum": ["court", "clinic", "cjc", "other"] },
+      "lat": { "type": "number" },
+      "lng": { "type": "number" },
+      "issues": { "type": "array", "items": { "type": "string" } },
+      "hours": {
+        "type": "object",
+        "required": ["weekdays", "weekend"],
+        "properties": {
+          "weekdays": { "type": "string" },
+          "weekend": { "type": "string" }
+        }
+      },
+      "phone": { "type": "string" },
+      "url": { "type": "string" },
+      "eligibility": { "type": "string" },
+      "address": { "type": "string" },
+      "serviceArea": { "type": "string" }
+    },
+    "additionalProperties": false
+  }
+}

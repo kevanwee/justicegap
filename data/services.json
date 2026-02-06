@@ -1,0 +1,68 @@
+[
+  {
+    "id": "court-1",
+    "name": "Supreme Court (Demo)",
+    "type": "court",
+    "lat": 1.2897,
+    "lng": 103.8518,
+    "issues": ["criminal", "employment", "debt"],
+    "hours": { "weekdays": "08:30-18:00", "weekend": "closed" },
+    "address": "1 Supreme Court Ln, Singapore",
+    "url": "https://www.judiciary.gov.sg/"
+  },
+  {
+    "id": "court-2",
+    "name": "State Courts (Demo)",
+    "type": "court",
+    "lat": 1.3084,
+    "lng": 103.8505,
+    "issues": ["criminal", "employment", "debt", "housing"],
+    "hours": { "weekdays": "08:30-18:00", "weekend": "closed" },
+    "address": "1 Havelock Sq, Singapore",
+    "url": "https://www.judiciary.gov.sg/"
+  },
+  {
+    "id": "court-3",
+    "name": "Family Justice Courts (Demo)",
+    "type": "court",
+    "lat": 1.3039,
+    "lng": 103.8521,
+    "issues": ["divorce"],
+    "hours": { "weekdays": "08:30-18:00", "weekend": "closed" },
+    "address": "3 Havelock Sq, Singapore",
+    "url": "https://www.judiciary.gov.sg/"
+  },
+  {
+    "id": "clinic-1",
+    "name": "Legal Aid (Demo)",
+    "type": "clinic",
+    "lat": 1.289,
+    "lng": 103.8501,
+    "issues": ["divorce", "employment", "debt", "housing", "immigration"],
+    "hours": { "weekdays": "09:00-17:30", "weekend": "closed" },
+    "address": "45 Maxwell Rd, Singapore",
+    "url": "https://www.mlaw.gov.sg/"
+  },
+  {
+    "id": "clinic-2",
+    "name": "Community Legal Clinic (Demo)",
+    "type": "clinic",
+    "lat": 1.3521,
+    "lng": 103.8198,
+    "issues": ["employment", "debt", "housing"],
+    "hours": { "weekdays": "18:30-21:00", "weekend": "10:00-14:00" },
+    "address": "Ang Mo Kio (Demo)",
+    "url": "https://www.probono.sg/"
+  },
+  {
+    "id": "cjc-1",
+    "name": "Community Justice Centre (Demo)",
+    "type": "cjc",
+    "lat": 1.308,
+    "lng": 103.8509,
+    "issues": ["debt", "housing", "criminal"],
+    "hours": { "weekdays": "09:00-17:00", "weekend": "closed" },
+    "address": "1 Havelock Sq, Singapore",
+    "url": "https://www.cjc.gov.sg/"
+  }
+]
