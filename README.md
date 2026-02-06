@@ -1,4 +1,4 @@
-# JusticeGap
+# JusticeGap (WORK IN PROGRESS) - Now fully running on dummy data
 
 JusticeGap maps how far people are from legal help in the real world.
 
